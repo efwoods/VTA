@@ -1,27 +1,22 @@
----
 declared-services:
-  wbc-conversation-service:
+  Watson-Assistant-ChatBots-LinearControl-Quantum: # This is the name of your assistant service
     label: conversation
     plan: free
-  wbc-discovery-service:
+  Discovery-Watson-LCS-Evan: # This is the name of your Discovery service
     label: discovery
     plan: lite
-  wbc-natural-language-understanding-service:
+  Natural_Language_Understanding_Quantum_Chatbot: # This is the name of your Natural language understanding service
     label: natural-language-understanding
     plan: free
-  wbc-tone-analyzer-service:
-    label: tone_analyzer
-    plan: lite
 applications:
 - path: .
   memory: 256M
   instances: 1
-  name: watsonquantchatbot
+  name: VTA # This is the name of your chatbot
   disk_quota: 256M
-  random-route: false
+  random-route: true
   timeout: 180
-  services:
-  - wbc-conversation-service
-  - wbc-tone-analyzer-service
-  - wbc-natural-language-understanding-service
-  - wbc-discovery-service
+  services: # These are the names of the services above
+  - Natural_Language_Understanding_Quantum_Chatbot 
+  - Discovery-Watson-LCS-Evan
+  - Watson-Assistant-ChatBots-LinearControl-Quantum
