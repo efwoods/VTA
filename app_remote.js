@@ -31,7 +31,7 @@ const fs = require('fs'); // file system for loading JSON
 //var nodehun = require('/home/efwoods/LCS-chatbot/node_modules/nodehun/build/' + ($
 //var dict = new nodehun(fs.readFileSync('/home/efwoods/LCS-chatbot/node_modules/no$
 
-// var spellCheck = require('./Analyze_Sentence_for_Errors.js');
+var spellCheck = require('./Analyze_Sentence_for_Errors.js');
 
 /* Monitoring Agent: Uncomment Lines 41, 170, and 244  */
 //const spawn = require("child_process").spawn;
@@ -232,7 +232,7 @@ wstream.end();
 			   		var words = payload.wordList;
 			   		console.log('XXXXXXXXXXXXXXXWORDSXXXXX' + words);
 			   		
-/*				   	spellCheck.analyze(words, 0, function(analyzed_input){
+				   	spellCheck.analyze(words, 0, function(analyzed_input){
 				   		analyzed_input.forEach(function(w) {
 				   		console.log('^^^^^^^^^^^^^^^^^^^^^^^^^^^^' + JSON.stringify(analyzed_input[w].suggestions));
 				   			if(!analyzed_input[w].correct) {
@@ -240,11 +240,10 @@ wstream.end();
 				   			}
 				   		//data.output.text.push(JSON.stringify(analyzed_input[w].suggestions));
 				   		});
-
 				   		
 						//return res.json(data);
 									
-*/						
+						
 						// lookup actions
 						//else{
 							checkForLookupRequests(data, function(err, data) {
@@ -256,7 +255,7 @@ wstream.end();
 							});
 						//}
 						
-//				  	});
+				  	});
 			  	}
 				else {
 							checkForLookupRequests(data, function(err, data) {
