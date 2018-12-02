@@ -1,13 +1,13 @@
 declared-services:
-  Watson-Assistant-ChatBots-LinearControl-Quantum: # This is the name of your assistant service
+  Accounting2020_Assistant: # This is the name of your assistant service
     label: conversation
     plan: free
-  Discovery-Watson-LCS-Evan: # This is the name of your Discovery service
+  Accoutning2020_Discovery: # This is the name of your Discovery service
     label: discovery
     plan: lite
-  Natural_Language_Understanding_Quantum_Chatbot: # This is the name of your Natural language understanding service
-    label: natural-language-understanding
-    plan: free
+#  NLU: # This is the name of your Natural language understanding service
+ #   label: natural-language-understanding
+  #  plan: Lite
 applications:
 - path: .
   memory: 256M
@@ -17,6 +17,6 @@ applications:
   random-route: true
   timeout: 180
   services: # These are the names of the services above
-  - Natural_Language_Understanding_Quantum_Chatbot 
-  - Discovery-Watson-LCS-Evan
-  - Watson-Assistant-ChatBots-LinearControl-Quantum
+ # - NLU 
+  - Accounting2020_Discovery
+  - Accounting2020_Assistant
