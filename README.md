@@ -1,4 +1,5 @@
 # How to operate and customize your own chatbot
+I highly recommend cloning this repository to your own personal github account so that you can make changes to your own bot at will and save those changes!
 
 ## Setup
 To begin: 
