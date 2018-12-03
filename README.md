@@ -2,7 +2,7 @@
 I highly recommend cloning this repository to your own personal github account so that you can make changes to your own bot at will and save those changes!
   - Note: 
     - These chatbots can be modified simply for any purpose. To do so, create your own assistant dialogue and update the assistant service in the repository. Feel free to give the bot a new look by changing the front end! This is all that is required for the creation of a unique bot. 
-     - It is anticipated that a new assistant service and dialogue tree will be created for a unique chatbot and the front end will be modified to reflect this change graphically
+     - It is anticipated that a new assistant service and dialogue tree will be created for a unique chatbot and that the front end will be modified to reflect this change graphically
      
 ## Expected pipeline
 ### Initialization
