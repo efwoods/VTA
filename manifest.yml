@@ -10,11 +10,11 @@ declared-services:
   #  plan: Lite
 applications:
 - path: .
-  memory: 256M
+  memory: 256M # This will change the amount of memory allocated to your chatbot
   instances: 1
   name: VTA # This is the name of your chatbot
-  disk_quota: 256M
-  random-route: true
+  disk_quota: 256M # This will change the disk_quota allocated to your chatbot
+  random-route: true # IF TRUE: your chatbot will have a semi-random hyperlink to the website; the name under the field "name" above will always be a part of this link
   timeout: 180
   services: # These are the names of the services above
  # - NLU 
