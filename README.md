@@ -31,6 +31,11 @@ To add new services or change existing services
 
 ## Changing the Back End
 
+## Changing the Assistant Dialogue Tree
+Please view the Assistant Tutorial located here: [Assistant Tutorial](https://github.com/efwoods/Tutorials/blob/master/Assistant.md) 
+## Changing the Discovery Service
+Please view the Discovery Tutorial located here: [Discovery Tutorial](https://github.com/efwoods/Tutorials/blob/master/Watson-Discovery/Watson-Discovery-GUI(Tooling).md)
+
 ## Update Cloud Foundry with this repository
 1. `cd` to the directory of this repository
   - Note that this location on your local machine will be where you cloned this repository using the command `git clone https://github.com/efwoods/VTA.git`
