@@ -22,7 +22,9 @@ To add new services or change existing services
  4. Declare these services in manifest.yml  under the `declared-services` and `applications` fields
    - Note you can use the current declaration of services in `manifest.yml` as a template for adding new services
    - Note `manifest.yml` is commented for your ease of use
- 5. If you are adding new functionality to your app in the back end with new services, make sure to add these services in `app.js`
+ 5. If you are adding a service that is not listed as a Cloud Foundry service on bluemix.net then you will need to create a connection to this service by clicking on `create connection` in bluemix.net after selecting your cloud foundry app
+  - Note you will need to create the cloud foundry app first then connect new services which are not cloud foundry services afterward 
+ 6. If you are adding new functionality to your app in the back end with new services, make sure to add these services in `app.js`
 
 ## Changing the Front End
 
