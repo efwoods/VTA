@@ -1,6 +1,26 @@
 # How to operate and customize your own chatbot
+
+[Spark Presentation](https://spark.adobe.com/page/0rb3uasESYE0F/)
+
+[VTA Accounting Demo](https://vta-busy-baboon.mybluemix.net/)
+
 I highly recommend cloning this repository to your own personal github account so that you can make changes to your own bot at will and save those changes!
-  - Note: These chatbots can be modified simply for any purpose. To do so, create your own assistant dialogue and update the service in the bot. Feel free to give the bot a new look by changing the front end! This is all that is required for the creation of a unique bot. 
+  - Note: 
+    - These chatbots can be modified simply for any purpose. To do so, create your own assistant dialogue and update the assistant service in the repository. Feel free to give the bot a new look by changing the front end! This is all that is required for the creation of a unique bot. 
+     - It is anticipated that a new assistant service and dialogue tree will be created for a unique chatbot and that the front end will be modified to give the unique chatbot a unique look and feel
+     
+## Expected pipeline
+### Initialization
+1. Setup
+2. Changing and Adding Services ( if creating new assistant, discovery, and NLU services) 
+3. Changing the Assistant Dialogue Tree (to create a new chatbot dialogue)
+4. Changing the Front End (to change the appearance of your chatbot)
+5. Updating Cloud Foundry and Pushing the app (to host the bot on cloud foundry)
+
+### After initialization
+- Visit the chatbot at the website provided through the bluemix.net cloud foundry application
+- run a cronjob to download log usage data
+- (opt) parse usage data for usage visualization and user insight
 
 ## Setup
 To begin: 
