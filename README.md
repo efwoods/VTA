@@ -3,6 +3,8 @@
 ## Setup
 To begin: 
 1. Create your own linux VM and clone this repository into your machine
+  - You can download a free VMWare Workstation player from here: [VMware Workstation 15.0.2 Player for Windows 64-bit Operating Systems.](https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/15_0)
+  - You can download a free linux operating system from Ubuntu's Desktop link found on there website and provided here: [Ubuntu Desktop version 18.04 LTS](https://www.ubuntu.com/download/desktop/thank-you?version=18.04.1&architecture=amd64)
   - The command to clone this repo is `git clone https://github.com/efwoods/VTA.git`
 2. Install the ibmcloud CLI 
   - [Instructions are found here](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use)
