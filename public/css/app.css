@@ -6,7 +6,7 @@
 
 body {
     background-color: black;
-	background-image: url('../img/watson.gif');
+	background-image: url('../img/watson.gif'); /* Add images to the img folder to change the background here */
     background-repeat:no-repeat;
     background-position:center;
     background-attachment:fixed;
@@ -162,7 +162,7 @@ div {
 }
 
 .from-user .message-inner:after {
-  background-image: url("../img/clemsonpaw.png");
+  background-image: url("../img/clemsonpaw.png"); /* Change the user icon here */
   z-index: 2;
   background-size: 30px 30px;
   background-repeat: no-repeat;
@@ -200,7 +200,7 @@ div {
 
 .from-watson.top p:before {
   content: "";
-  background-image: url("../img/watson.png");
+  background-image: url("../img/watson.png"); /* change watson's icon here */
   background-size: 30px 30px;
   background-repeat: no-repeat;
   position: absolute;
