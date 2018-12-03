@@ -198,7 +198,7 @@ wstream.write(hours);
 wstream.write('\n');
 */
 
-//fs.appendFileSync('logs.json',JSON.stringify(data));
+fs.appendFileSync('logs.json',JSON.stringify(data));
 
 // this works
 /*
