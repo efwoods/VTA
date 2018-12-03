@@ -165,15 +165,8 @@ app.post('/api/message', function(req, res) {
     console.log('callAssistant called.....');
     const queryInput = JSON.stringify(payload.input);
     console.log('assistant.input :: ', JSON.stringify(payload.input));
-
-//    const pythonProcess = spawn('python', ['/home/admin/LCS-chatbot/monitor.py', payload]); // to send data to elastic search
-    
-    // const context_input = JSON.stringify(payload.context);
-  //return;
-  
   if (payload.input.text != '') {
           // console.log('input text payload = ', payload.input.text);
-
     	//console.log('PAYLOAD_CONTEXT =', payload.context.nlu_output);
 		assistant.message(payload, function(err, data) {
 		  if (err) {
@@ -189,37 +182,14 @@ app.post('/api/message', function(req, res) {
 				}
 				console.log('assistant.message :: ', JSON.stringify(data)); // assistant message 
 /////////////////////////////////////
-//var wstream = fs.createWriteStream('myOutput.txt');
-//var date = new Date();
-//var hours = date.getHours();
-//wstream.write("Date: ");
-/*
-wstream.write(date);
-wstream.write('\n');
-wstream.write('Hour: ');
-wstream.write(hours);
-wstream.write('\n');
-*/
-//var datetime = '[' getDateTime() + ']';
-//var text = datetime + '\r\n';
-
-//fs.appendFileSync('logs.json',text);
-//fs.appendFileSync('logs.json','\n');
+/* LOGGING */
 fs.appendFileSync('logs.json',Date.time());
 fs.appendFileSync('logs.json','\n');
 fs.appendFileSync('logs.json','\n');
 fs.appendFileSync('logs.json',JSON.stringify(data));
 fs.appendFileSync('logs.json','\n');
-fs.appendFileSync('logs.json','\n');
-// this works
-/*
-wstream.write(JSON.stringify(data));
-wstream.write('\n');
-wstream.write('\n');
+fs.appendFileSync('logs.json','\n'); 
 
-wstream.write('Another line\n');
-wstream.end();
-*/
 ////////////////////////////////////
 				//spellSuggestions
 				
@@ -274,7 +244,6 @@ wstream.end();
 							  if (err) {
 								return res.status(err.code || 500).json(err);
 							  } else {
-//                                const pythonProcess = spawn('python', ['/home/admin/LCS-chatbot/monitor.py', data]); // to send data to elastic search
 								return res.json(data);
 							  }
 							});
@@ -567,73 +536,6 @@ function checkForLookupRequests(data, callback) {
             }*/
             discoveryResponse =
               bestLine || 'Sorry I currently do not have an appropriate response for your query. Please send an email to efwoods@clemson.edu for an answer to your question.';
-            // EXTRA SPEECH CAPABILITY
-   /*    speech to text      {
-  "url": "https://stream.watsonplatform.net/speech-to-text/api",
-  "username": "1ed4341f-3ecf-42f6-bd8b-d06862702bc9",
-  "password": "FGnmk2RHoX2v"
-}*/
-/*
-{
-  "url": "https://stream.watsonplatform.net/text-to-speech/api",
-  "username": "63348a74-f75b-43b7-b08f-f3c9a68aa8f8",
-  "password": "Ghj7Uejo5XFB"
-} text to speech ^
-
-			/* SYNTHESIZE AUDIO */
-			/*
-			var TextToSpeechV1 = require('watson-developer-cloud/text-to-speech/v1');
-			var fs = require('fs');
-
-			var textToSpeech = new TextToSpeechV1({
-			  username: '63348a74-f75b-43b7-b08f-f3c9a68aa8f8',
-			  password: 'Ghj7Uejo5XFB'
-			});
-
-			var synthesizeParams = {
-			  text: bestLine,
-			  accept: 'audio/wav',
-			  voice: 'en-US_AllisonVoice'
-			};
-
-			// Pipe the synthesized text to a file.
-			textToSpeech.synthesize(synthesizeParams).on('error', function(error) {
-			  console.log(error);
-			}).pipe(fs.createWriteStream('hello_world.wav'));
-
-			// TO PLAY
-/*			
-			var Sound = require('node-aplay');
-
-			// fire and forget: 
-			//new Sound('/home/admin/quantum-chatbot/hello_world.wav').play();
-			new Sound('./hiya.wav').play();
-/*			
-			//new Audio('./hello_world.wav').play();
-			
-			*/
-		//	console.log('CREATEDAUDIO---------------------------------------');
-			// END SYNTH
-
-			// TO PLAY
-			/*
-			var Sound = require('node-aplay');
-
-			// fire and forget: 
-			//new Sound('/home/admin/quantum-chatbot/hello_world.wav').play();
-			new Sound('./hello_world.wav').play();
-			*/
-			//new Audio('./hello_world.wav').play();
-		
-		/*
-			const audio_player = require('./play_sound');
-			audio_player.play();
-			
-			console.log('PLAYINGAUDIO---------------------------------------');
-			// END SYNTH
-			*/
-          }
-
           if(discoveryResponse.search("Sorry") !== -1){ // sorry was not found in the string... discovery does not have a response...
           	console.log('questionFound');
 
@@ -645,7 +547,6 @@ function checkForLookupRequests(data, callback) {
 			data.context.new_passage = null;
 			data.context.key = null;
 		}
-
           // discoveryResponse = bestPassage.passage_text; 
           // console.log('before the push');
           // console.log(JSON.stringify(data, null, 2));
