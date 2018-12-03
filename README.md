@@ -28,12 +28,36 @@ To add new services or change existing services
  6. If you are adding new functionality to your app in the back end with new services, make sure to add these services in `app.js`
 
 ## Changing the Front End
-
+You can change the look and feel of your chatbot on the website by making changes to `app.css` which is located in the folder `~/VTA/public/css`
+  - Note `app.css` is commented for ease-of-use
 
 ## Changing the Back End
+You can change the functionality of your chatbot by making changes to `app.js`. `app.js` is located in the folder `~/VTA`.
+- Note the process of creating new functionality is optional and complex. By reading the following notes you can find a deeper understanding of how the services interface with the backend script, `app.js`
+- `app.js` will first initialize all services based on the declaration of these services in the `.env` file.
+- Beginning on line 123 the body of the input will be parsed for regular expressions
+- The `payload` is the variable which holds the user input and returns output to the front end of the chatbot 
+- The Backend works in tandem with the assistant service. 
+  - To select a function inside of `app.js` such as listing topics when a user asks "What can I ask?" you must first set a context variable inside the assistant dialogue such that the variable `data.context.action.lookup` is set to a value that triggers the if-else statements beginning on line 271
+   - action context variables can be set with the following in your assistant service inside a dialogue node: `variable: action value: {"lookup":"list_topics","append_response":true}
+   - in the above example, changing "list_topics" to any constant located on line 64 to 66 will enter a new function inside the if statement on line 271.
+   - You can add new else statements to the if statement on lin 271 to create your own functionality of the back end. This functionality is driven by the user input on the front end into the assistant dialogue tree which will map to an intent which sets a context variable. This context variable is added to the payload automatically and sent to the backend where the if statement on lin 271 is triggered which triggers the desired function.
+   - The context actions are cleared on line 559 and the payload context action is cleared on line 562
+   - It is critical when adding your own function to send the data back to the front end using `callback(null, data)`
+- Logging is implemented beginning on line 186
+- Note Spellchecking requires the following:
+  1. uncommenting line 37 of `app.js`, 
+  2. installing the proper node modules (using nodehun), 
+  3. making the proper edits in `Analyze_Sentence_for_Errors.js`, 
+  4. uncommenting the block comment from 216 to 228
+  5. uncommenting line 240
+  6. updating `package.json` to include nodehun.
+  - This functionality when enabled will allow for spellchecking of user input and will display possible alternatives to misspelled words if any are detected. 
+  - For simplicity, this functionality has been disabled.
 
 ## Changing the Assistant Dialogue Tree
 Please view the Assistant Tutorial located here: [Assistant Tutorial](https://github.com/efwoods/Tutorials/blob/master/Assistant.md) 
+
 ## Changing the Discovery Service
 Please view the Discovery Tutorial located here: [Discovery Tutorial](https://github.com/efwoods/Tutorials/blob/master/Watson-Discovery/Watson-Discovery-GUI(Tooling).md)
 
