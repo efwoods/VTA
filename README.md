@@ -12,8 +12,19 @@ To begin:
   - Type `bluemix login --sso` for a single sign on
   - Target cloud foundry with `bluemix target --cf`
 
+## Adding & Changing Services
+To add new services or change existing services
+1. Create the service through bluemix.net
+2. Identify the Service credtials from bluemix.net : these are either the service apikey or the username and password for the service
+3. Add these service credentials appropriately into the .env file using the .env file as a template
+  - Note the .env file is hidden on your linux local machine after cloning, but you can still edit this file by using `your_favorite_editor .env`
+ 4. Declare these services in manifest.yml  under the `declared-services` and `applications` fields
+   - Note you can use the current declaration of services in `manifest.yml` as a template for adding new services
+   - Note `manifest.yml` is commented for your ease of use
+ 5. If you are adding new functionality to your app in the back end with new services, make sure to add these services in `app.js`
+
 ## Changing the Front End
-In order to add or change services, edit the manifest.yml file. This file has been commented for ease of use.
+
 
 ## Changing the Back End
 
