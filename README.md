@@ -3,6 +3,7 @@
 ## Setup
 To begin: 
 1. Create your own linux VM and clone this repository into your machine
+  - The command to clone this repo is `git clone https://github.com/efwoods/VTA.git`
 2. Install the ibmcloud CLI 
   - [Instructions are found here](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use)
 3. Login to your bluemix account
@@ -16,7 +17,7 @@ In order to add or change services, edit the manifest.yml file. This file has be
 
 ## Update Cloud Foundry with this repository
 1. `cd` to the directory of this repository
-  - Note that this location on your local machine will be where you cloned this repository using the command `git clone ...efwoods/VTA`
+  - Note that this location on your local machine will be where you cloned this repository using the command `git clone https://github.com/efwoods/VTA.git`
 2. Push the app to cloud foundry
   - The command is `bluemix cf push`
     - Note the cf must be targeted before a push
