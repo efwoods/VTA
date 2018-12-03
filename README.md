@@ -1,4 +1,4 @@
-# How to operate and customize your own chatbot!
+# How to operate and customize your own chatbot
 
 ## Setup
 To begin: 
@@ -23,4 +23,21 @@ In order to add or change services, edit the manifest.yml file. This file has be
     - Note the cf must be targeted before a push
   - [Instructions for pushing this app can be found here](https://console.bluemix.net/docs/runtimes/nodejs/getting-started.html#getting-started)
 
+## How SSH into to cf app
+You can SSH into the cf app with the command `bluemix cf ssh NAME_OF_APP`
+  - If you are working with this VTA, the NAME_OF_APP is VTA
+  - Note if a user is idling or actively using on the website, you will not be able to ssh or download log files
+  - Note if you SSH before a user idles or actively uses the website, then you can leave your SSH session running idle without interfering with the user's activity
+
+## How to download log usage data 
+You can download log usage data to your local machine by using `bluemix cf ssh NAME_OF_APP -c "cat app/log_file_name" >> your_local_log_file.txt` from your local machine
+  - Note you can run this command periodically with a cronjob and new data will be appended to the log file
+  - The format of the log is as follows:
+    - Time since UNIX epoch 
+    - a blank line
+    - The JSON output of the VTA usage for that time
+    - a blank line
+
+## How to view the size of files in MB
+You can view file sizes in linux using `ls -l --block-size=M`
 
