@@ -26,6 +26,9 @@ const bodyParser = require('body-parser'); // parser for post requests
 const numeral = require('numeral');
 const fs = require('fs'); // file system for loading JSON
 
+Date.prototype.toUnixTime = function() { return this.getTime()/1000|0};
+Date.time = function() { return new Date().toUnixTime(); }
+
 /* Spellchecking */
 //var debugFlag = process.argv.indexOf('debug') > -1;
 //var nodehun = require('/home/efwoods/LCS-chatbot/node_modules/nodehun/build/' + ($
@@ -197,9 +200,17 @@ wstream.write('Hour: ');
 wstream.write(hours);
 wstream.write('\n');
 */
+//var datetime = '[' getDateTime() + ']';
+//var text = datetime + '\r\n';
 
+//fs.appendFileSync('logs.json',text);
+//fs.appendFileSync('logs.json','\n');
+fs.appendFileSync('logs.json',Date.time());
+fs.appendFileSync('logs.json','\n');
+fs.appendFileSync('logs.json','\n');
 fs.appendFileSync('logs.json',JSON.stringify(data));
-
+fs.appendFileSync('logs.json','\n');
+fs.appendFileSync('logs.json','\n');
 // this works
 /*
 wstream.write(JSON.stringify(data));
