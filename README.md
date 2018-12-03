@@ -1,5 +1,6 @@
 # How to operate and customize your own chatbot
 I highly recommend cloning this repository to your own personal github account so that you can make changes to your own bot at will and save those changes!
+  - Note: These chatbots can be modified simply for any purpose. To do so, create your own assistant dialogue and update the service in the bot. Feel free to give the bot a new look by changing the front end! This is all that is required for the creation of a unique bot. 
 
 ## Setup
 To begin: 
