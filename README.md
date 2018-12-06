@@ -2,7 +2,7 @@
 
 [Spark Presentation](https://spark.adobe.com/page/0rb3uasESYE0F/)
 
-[VTA Accounting Demo](https://www.acct2020.com:8000)
+[VTA Accounting Demo](http://www.acct2020.com:8000/)
 
 I highly recommend cloning this repository to your own personal github account so that you can make changes to your own bot at will and save those changes!
   - Note: 
