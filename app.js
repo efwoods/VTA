@@ -43,12 +43,12 @@ Date.time = function() { return new Date().toUnixTime(); }
 
 const AssistantV1 = require('watson-developer-cloud/assistant/v1');
 const DiscoveryV1 = require('watson-developer-cloud/discovery/v1');
-const NaturalLanguageUnderstandingV1 = require('watson-developer-cloud/natural-language-understanding/v1.js');
+//const NaturalLanguageUnderstandingV1 = require('watson-developer-cloud/natural-language-understanding/v1.js');
 const ToneAnalyzerV3 = require('watson-developer-cloud/tone-analyzer/v3');
 
 const assistant = new AssistantV1({ version: '2018-02-16' });
 const discovery = new DiscoveryV1({ version: '2018-03-05' });
-const nlu = new NaturalLanguageUnderstandingV1({ version: '2018-03-16' });
+//const nlu = new NaturalLanguageUnderstandingV1({ version: '2018-03-16' });
 
 const WatsonDiscoverySetup = require('./lib/watson-discovery-setup');
 const WatsonAssistantSetup = require('./lib/watson-assistant-setup');
