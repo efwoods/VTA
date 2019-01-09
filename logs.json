@@ -18,3 +18,11 @@
 
 {"intents":[{"intent":"General_Agent_Capabilities","confidence":0.9721362113952636}],"entities":[],"input":{"text":"What can I ask?"},"output":{"text":["Some example questions are: Will technology take my job? What is managerial accounting? What do managers do? What can I learn from this course? What are the course objectives?","If you have any questions, input, or feedback, please mail efwoods@clemson.edu!","You can ask questions about the following topics:"],"nodes_visited":["node_1_1533045481679"],"log_messages":[]},"context":{"conversation_id":"ccc98622-960e-4f01-86e9-3e797de12891","system":{"initialized":true,"dialog_stack":[{"dialog_node":"root"}],"dialog_turn_counter":3,"dialog_request_counter":3,"_node_output_map":{"handler_20_1542067898685":[0],"Welcome":{"1":[0]}},"branch_exited":true,"branch_exited_reason":"completed"},"welcome_user":"John","username":"John","action":{"lookup":"list_topics","append_response":true}}}
 
+1547061570
+
+{"intents":[],"entities":[],"input":{},"output":{"text":["Hello, I’m a demo customer care virtual assistant to show you the basics.  I can help with directions to my store, hours of operation and booking an in-store appointment"],"nodes_visited":["Opening"],"log_messages":[]},"context":{"conversation_id":"a5156439-68e6-49ff-babd-7db2b6a30499","system":{"initialized":true,"dialog_stack":[{"dialog_node":"root"}],"dialog_turn_counter":1,"dialog_request_counter":1,"_node_output_map":{"Opening":[0]},"branch_exited":true,"branch_exited_reason":"completed"},"no_reservation":true}}
+
+1547061615
+
+{"intents":[{"intent":"Customer_Care_Store_Hours","confidence":0.9952783584594727}],"entities":[],"input":{"text":"What are your hours of operation?"},"output":{"text":["Our hours are Monday to Friday 10am to 8pm and Friday and Saturday 11am to 6pm."],"nodes_visited":["Hours of Operation","node_6_1482426521282"],"log_messages":[]},"context":{"conversation_id":"a5156439-68e6-49ff-babd-7db2b6a30499","system":{"initialized":true,"dialog_stack":[{"dialog_node":"root"}],"dialog_turn_counter":2,"dialog_request_counter":2,"_node_output_map":{"Opening":[0],"node_6_1482426521282":[0]},"branch_exited":true,"branch_exited_reason":"completed"},"no_reservation":true}}
+
